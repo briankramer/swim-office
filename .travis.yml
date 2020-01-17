@@ -7,7 +7,7 @@ before_install:
   - docker build -t bkramer2012/swim-office-react-test -f ./frontend/Dockerfile.dev ./frontend
 
 script:
-  - docker run bkramer2012/swim-office-react-test npm test -- --coverage
+  - docker run -e CI=true bkramer2012/swim-office-react-test npm test -- --coverage
 
 after_success:
   - docker build -t bkramer2012/swim-office-frontend ./frontend
