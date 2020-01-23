@@ -22,7 +22,6 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  edge: true
   region: us-east-2
   app: swim-office
   env: SwimOffice-env
@@ -30,5 +29,7 @@ deploy:
   bucket_path: swim-office
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
