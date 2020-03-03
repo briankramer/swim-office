@@ -1,4 +1,7 @@
-sudo: required
+language: node_js
+node_js:
+  - 11
+os: linux
 
 services:
   - docker
@@ -25,7 +28,7 @@ deploy:
   region: us-east-2
   app: swim-office
   env: SwimOffice-env
-  bucket_name: elasticbeanstalk-us-east-2-686225210919
+  bucket: elasticbeanstalk-us-east-2-686225210919
   bucket_path: swim-office
   on:
     branch: master
