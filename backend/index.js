@@ -36,7 +36,7 @@ pgClient
 
 app.get("/", (req, res) => {
     console.log(keys)
-    res.send("Hi")
+    res.send(keys)
 })
 
 app.get("/practice/all", async (req, res) => {
