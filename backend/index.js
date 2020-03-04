@@ -35,10 +35,12 @@ pgClient
 // Express route handlers
 
 app.get("/", (req, res) => {
+    console.log(keys)
     res.send("Hi")
 })
 
 app.get("/practice/all", async (req, res) => {
+    console.log(keys)
     await pgClient.query("INSERT INTO practice ( " +
         " session, grouping, reps, distance, interval, intensity )" +
         " VALUES ( 1, 1, 2, 3, 4, 'red' )")
