@@ -1,8 +1,8 @@
-const { configureStore } = require("redux-mock-store")
+import configureStore from "redux-mock-store"
 import ReactDOM from "react-dom"
 import {Provider} from "react-redux"
 import React from "react"
-import {AppState} from "./model/AppState";
+import {AppState} from "./model/AppState"
 
 export const mockStateStore = (state: AppState) => configureStore()(state)
 
