@@ -1,4 +1,4 @@
-import configureStore from "redux-mock-store"
+const { configureStore } = require("redux-mock-store")
 import ReactDOM from "react-dom"
 import {Provider} from "react-redux"
 import React from "react"
